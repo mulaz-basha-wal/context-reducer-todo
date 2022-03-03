@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+body {
+    background: linear-gradient(to right, #403a3e, #be5869);
+}
+.title {
+    color: white;
+    text-align: center;
+}
+.todoItemInput,
+.todoItemDescription {
+    padding: 12px 20px;
+    font-weight: bold;
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+    display: block;
+}
+.todoItemDescription {
+    margin: 10px auto;
+    height: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoFormButtons {
+    width: 40%;
+    margin: 10px auto 50px auto;
+    text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addItem,
+.clearAll {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    width: 47%;
+    margin: 10px 5px;
+    border-radius: 15px;
+    border-width: 5px;
+    border-style: solid;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.addItem {
+    background-color: green;
+    border-color: green;
 }
-
-.App-link {
-  color: #61dafb;
+.clearAll {
+    background-color: red;
+    border-color: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.availTodos {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.avail {
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+}
+.count {
+    background-color: blue;
+    border-radius: 50%;
+    padding: 5px 10px;
+    color: white;
+}
+.todoItem {
+    text-align: right;
+    width: 50%;
+    margin: 5px auto;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: gray;
+}
+.todoItemText {
+    text-align: left;
+    padding: 0px;
+    font-weight: bold;
+    margin: 0px;
+}
+.todoDeleteButton {
+    padding: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: red;
+}
+.todoDescription {
+    text-align: left;
+}
+.validationError {
+    color: red;
+    margin: auto;
+    width: 42%;
+    padding-left: 10px;
+}
+@media (max-width: 500px) {
+    .validationError {
+        width: 80%;
+    }
+    .todoForm,
+    .todoFormButtons {
+        width: 100%;
+        margin: auto;
+    }
+    .todoItemInput,
+    .todoItem,
+    .availTodos,
+    .todoItemDescription {
+        width: 70%;
+    }
+    .addItem,
+    .clearAll {
+        width: 40%;
+    }
+}
+@media (min-width: 501px) and (max-width: 850px) {
+    .validationError {
+        width: 60%;
+    }
+    .todoForm,
+    .todoFormButtons {
+        width: 75%;
+        margin: auto;
+    }
+    .todoItemInput,
+    .todoItem,
+    .availTodos,
+    .todoItemDescription {
+        width: 50%;
+    }
+    .addItem,
+    .clearAll {
+        width: 40%;
+    }
 }
